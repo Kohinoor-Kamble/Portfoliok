@@ -1,0 +1,380 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+   
+}
+
+header {
+    background: #6200ea; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+   
+}
+
+
+#hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #3700b3;
+    color: #fff;
+    padding: 100px 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    animation: fadeIn 1s ease; /* Animation on entry */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* About Section Styles */
+#about {
+    height: 400px;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+    animation-delay: 0.5s; /* Delay for subsequent sections */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+#about:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light background on hover */
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scale and shadow */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow */
+}
+
+/* Text Animation for About Section */
+#about h2 {
+    animation: slideIn 0.5s forwards; /* Slide-in effect */
+    opacity: 0; /* Start hidden */
+}
+
+#about p {
+    animation: fadeInUp 0.5s forwards; /* Fade in up effect */
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation delay to elements in About Section */
+#about h2 {
+    animation-delay: 0.3s;
+}
+
+#about p {
+    animation-delay: 0.6s;
+}
+
+
+.profile-image {
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+#about, #skills, #projects, #contact {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+    animation-delay: 0.5s; /* Delay for subsequent sections */
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    animation: slideUp 0.5s forwards; /* Slide up animation */
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#about{
+    height: 420px;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+}
+
+.btn-primary {
+    transition: background-color 0.3s, transform 0.2s;
+}
+#row {
+    margin-top: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #3700b3;
+    transform: translateY(-2px);
+}
+
+
+.form-control {
+    border-radius: 4px;
+    box-shadow: none; 
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #6200ea;
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+
+/* Animation for cards on load */
+.card {
+    animation: fadeIn 0.5s forwards; /* Fade in for each card */
+    animation-delay: calc(0.1s * var(--i)); /* Staggered animation */
+}
+.containerid{
+  row-gap: 15px;
+
+    padding: 10px 5px;
+    
+}
+footer {
+    background: #6200ea;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer .list-inline-item {
+    margin: 0 15px;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #3700b3;
+}
+@media (max-width: 768px) {
+    #hero {
+        padding: 50px 10px; 
+    }
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .btn-primary {
+        width: 100%; /* Full width buttons */
+    }
+}
+.row{
+    margin-top: 50px;
+}
+
+/* Navbar Styles */
+.navbar {
+    /* background-color: rgba(98, 0, 234, 0.9);  */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link {
+    color: white; /* White text */
+    font-size: 1.1rem; /* Slightly larger text */
+    margin: 0 15px; /* Space between links */
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffeb3b; /* Bright yellow on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin: 10px 0; /* Stack links vertically on smaller screens */
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+.bg-light{
+    height: 400px;
+}
+/* Contact Section Styles */
+#contact {
+    background-color: #f8f9fa; /* Light background */
+}
+
+#contact h2 {
+    margin-bottom: 30px; /* Space below the heading */
+    font-weight: bold; /* Bold heading */
+}
+.container h2
+{
+    margin-bottom: 30px; /* Space below the heading */
+    font-weight: bold; 
+
+}
+/* Form styles */
+#contact-form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #ffffff; /* White background for the form */
+}
+
+/* Input and Textarea styles */
+.form-control {
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: none; 
+    border: 1px solid #ced4da; /* Light gray border */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.form-control:focus {
+    border-color: #6200ea; /* Purple border on focus */
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5); /* Glow effect */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #6200ea; /* Primary color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+/* Skills Section Styles */
+#skills {
+    padding: 50px 0; /* Add padding to the top and bottom */
+}
+
+#skills h2 {
+    margin-bottom: 40px; /* Space below the heading */
+    font-weight: bold; /* Bold heading */
+}
+
+/* Progress Bar Styles */
+.progress {
+    height: 25px; /* Height of the progress bar */
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between progress bars */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.progress-bar {
+    height: 100%; /* Full height of the parent */
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* Text color inside the progress bar */
+    transition: width 0.4s ease; /* Smooth width transition */
+    font-weight: bold; /* Bold text inside progress bar */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+/* Skill-specific colors */
+.progress-bar:nth-child(1) { background-color: #4caf50; } /* Green for HTML */
+.progress-bar:nth-child(2) { background-color: #2196f3; } /* Blue for CSS */
+.progress-bar:nth-child(3) { background-color: #ff9800; } /* Orange for Java */
+.progress-bar:nth-child(4) { background-color: #f44336; } /* Red for Python */
+.progress-bar:nth-child(5) { background-color: #9c27b0; } /* Purple for MySQL */
+.progress-bar:nth-child(6) { background-color: #3f51b5; } /* Indigo for DSA */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 30px; /* Space between columns on smaller screens */
+    }
+}
+
